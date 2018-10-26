@@ -1,0 +1,24 @@
+{
+    "jobs" : [
+        {
+            "watchdirectory": "c:\\temp",
+            "command" : "c:\\checkin\\checkindwg.exe",
+            "parameters": [
+                { 
+                    "option" : "--file", 
+                    "argument": "<filepath>" 
+                }
+            ]
+        },
+        {
+            "watchdirectory": "c:\\",
+            "command" : "c:\\checkin\\checkindwg.exe",
+            "parameters": [
+                { 
+                    "option" : "-f", 
+                    "argument": "<filepath>" 
+                }
+            ]
+        }
+    ]
+}
