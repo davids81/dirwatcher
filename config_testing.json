@@ -1,19 +1,18 @@
 {
     "jobs" : [
-      
         {
-            "watchdirectory": "V:\\Engineering Group\\SolidWorksDrawingCheckOutputPrivate",
-            "command" : "c:\\pcc\\pcc.exe",
+            "watchdirectory": "c:\\temp",
+            "command" : "c:\\checkin\\checkindwg.exe",
             "parameters": [
                 { 
-                    "option" : "-f", 
+                    "option" : "--file", 
                     "argument": "<filepath>" 
                 }
             ]
         },
-		{
-            "watchdirectory": "J:\\Ugii_Plot\\SOLIDWORKS Auto Checkin",
-            "command" : "C:\\CheckinDwg\\EpdmDrawingCheckinSvc.exe",
+        {
+            "watchdirectory": "c:\\",
+            "command" : "c:\\checkin\\checkindwg.exe",
             "parameters": [
                 { 
                     "option" : "-f", 
