@@ -1,4 +1,3 @@
-
 import time
 import sys
 from os import listdir
@@ -9,12 +8,18 @@ class app:
     def __init__(self, config):
         self.Jobs = config
 
-    def doJob(self, job):
-        files = listdir(job.watchdir)
+    def processFilesIn(self, files, job):
         for f in files:
             if isfile(join(job.watchdir, f)):
                 fullPath = join(job.watchdir, f)
                 job.execute(fullPath)
+
+
+    def doJob(self, job):
+        try:
+            self.processFilesIn(listdir(job.watchdir), job)
+        except FileNotFoundError as e:
+            print("bad deal..." + e.filename) 
 
     def run(self, id, stop):
         start = time.time()
