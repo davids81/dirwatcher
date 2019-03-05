@@ -12,7 +12,8 @@ class app:
         for f in files:
             if isfile(join(job.watchdir, f)):
                 fullPath = join(job.watchdir, f)
-                job.execute(fullPath)
+                if not fullPath.lower().endswith("json"):
+                    job.execute(fullPath)
 
 
     def doJob(self, job):
