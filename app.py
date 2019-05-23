@@ -5,8 +5,11 @@ from os.path import isfile, join
 from datetime import datetime
 
 class app:
+
+
     def __init__(self, config):
         self.Jobs = config
+
 
     def processFilesIn(self, files, job):
         for f in files:
@@ -21,6 +24,7 @@ class app:
             self.processFilesIn(listdir(job.watchdir), job)
         except FileNotFoundError as e:
             print("bad deal..." + e.filename) 
+
 
     def run(self, id, stop):
         start = time.time()

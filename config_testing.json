@@ -11,7 +11,7 @@
             ]
         },
         {
-            "watchdirectory": "c:\\",
+            "watchdirectory": "c:\\temp",
             "command" : "c:\\checkin\\checkindwg.exe",
             "parameters": [
                 { 
@@ -20,5 +20,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "logFile": "jobruns.log"
 }
